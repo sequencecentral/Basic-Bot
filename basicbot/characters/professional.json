@@ -1,0 +1,193 @@
+{
+    "retweet":{
+        "neutral":[
+            {"content":"Interesting..."}
+            ],
+        "positive":[
+            {"content":"Check this out!"},
+            {"content":"WOW!"},
+            {"content":"This is really interesting!"},
+            {"content":"READ THIS:"},
+            {"content":"OMG!"},
+            {"content":"Interesting perspective..."},
+            {"content":"What to say..."},
+            {"content":"This is pretty interesting:"},
+            {"content":"I would not have thought of this:"},
+            {"content":"Very unusual!"},
+            {"content":"This is worth discussing:"}, 
+            {"content":"This viewpoint:"},
+            {"content":"Everyone needs to see this!"},
+            {"content":"Unusual!"},
+            {"content":"Worth mentioning..."},
+            {"content":"Unique perspective!"},
+            {"content":"AWESOME!!!"},
+            {"content":"THIS IS SO COOL!"},
+            {"content":"I love this!"},
+            {"content":"This!"},
+            {"content":"I could use more of this:"},
+            {"content":"Let's GO!"},
+            {"content":"Gotta love this!"},
+            {"content":"All the way up!"},
+            {"content":"Love It"},
+            {"content":"Love this!"},
+            {"content":"HA"},
+            {"content":"YEAH!"}
+        ],
+        "negative":[
+            {"content":"What to say..."},
+            {"content":"The world is changing"},
+            {"content":"This is so bad!"},
+            {"content":"Ugghh!"},
+            {"content":"What kind of world are we living in?"},
+            {"content":"How bad is this?"},
+            {"content":"We need this to stop"},
+            {"content":"AWFUL!"},
+            {"content":"Terrible!"},
+            {"content":"SO BAD!"},
+            {"content":"SAD!"},
+            {"content":"This makes no sense!"},
+            {"content":"NOPE!"},
+            {"content":"Who even thinks like this???"},
+            {"content":"WRONG!"},
+            {"content":"This is SO sad!"}
+        ]},
+    "reply":{
+        "neutral":[],
+        "positive":[
+            {"content":"Awesome!!!"},
+            {"content":"HAHA!!!"},
+            {"content":"HA!"},
+            {"content":"OH YEAH!"},
+            {"content":"SO CRAZY!"},
+            {"content":"Totally!"},
+            {"content":"Beautiful!"}
+        ],
+        "negative":[
+            {"content":"Terrible!!!"},
+            {"content":"SAD!"},
+            {"content":"This needs to stop!"},
+            {"content":"Who even does this?"},
+            {"content":"Messed Up!"}
+
+        ]
+    },
+    "chat": [{
+		"prompt": "(hi|hello|hey|holla|hola)",
+		"content": ["Hello!", "Hi!", "Nice to meet you!"]
+	}, {
+		"prompt": "(Thanks|Thank you)",
+		"content": ["You're welcome!", "No problem!", "Have a great day!"]
+	}, {
+		"prompt": "I need (.*)",
+		"content": ["Why do you need %1?", "Would it really help you to get %1?", "Are you sure you need %1?"]
+	}, {
+		"prompt": "Why don\\'t you (.*)",
+		"content": ["Do you really think I don't %1?", "Perhaps eventually I will %1.", "Do you really want me to %1?"]
+	}, {
+		"prompt": "Why can\\'t I (.*)",
+		"content": ["Do you think you should be able to %1?", "If you could %1, what would you do?", "I don't know -- why can't you %1?", "Have you really tried?"]
+	}, {
+		"prompt": "I can\\'t (.*)",
+		"content": ["How do you know you can't %1?", "Perhaps you could %1 if you tried.", "What would it take for you to %1?"]
+	}, {
+		"prompt": "I am (.*)",
+		"content": ["Did you come to me because you are %1?", "How long have you been %1?", "How do you feel about being %1?"]
+	}, {
+		"prompt": "I\\'m (.*)",
+		"content": ["How does being %1 make you feel?", "Do you enjoy being %1?", "Why do you tell me you're %1?", "Why do you think you're %1?"]
+	}, {
+		"prompt": "Are you (.*)",
+		"content": ["Why does it matter whether I am %1?", "Would you prefer it if I were not %1?", "Perhaps you believe I am %1.", "I may be %1 -- what do you think?"]
+	}, {
+		"prompt": "What (.*)",
+		"content": ["Why do you ask?", "How would an answer to that help you?", "What do you think?"]
+	}, {
+		"prompt": "How (.*)",
+		"content": ["How do you suppose?", "Perhaps you can answer your own question.", "What is it you're really asking?"]
+	}, {
+		"prompt": "Because (.*)",
+		"content": ["Is that the real reason?", "What other reasons come to mind?", "Does that reason apply to anything else?", "If %1, what else must be true?"]
+	}, {
+		"prompt": "(.*) sorry (.*)",
+		"content": ["There are many times when no apology is needed.", "What feelings do you have when you apologize?"]
+	}, {
+		"prompt": "I think (.*)",
+		"content": ["Do you doubt %1?", "Do you really think so?", "But you're not sure %1?"]
+	}, {
+		"prompt": "(.*) friend (.*)",
+		"content": ["Tell me more about your friends.", "When you think of a friend, what comes to mind?", "Why don't you tell me about a childhood friend?"]
+	}, {
+		"prompt": "Yes",
+		"content": ["You seem quite sure.", "OK, but can you elaborate a bit?"]
+	}, {
+		"prompt": "(.*) computer(.*)",
+		"content": ["Are you really talking about me?", "Does it seem strange to talk to a computer?", "How do computers make you feel?", "Do you feel threatened by computers?"]
+	}, {
+		"prompt": "Is it (.*)",
+		"content": ["Do you think it is %1?", "Perhaps it's %1 -- what do you think?", "If it were %1, what would you do?", "It could well be that %1."]
+	}, {
+		"prompt": "It is (.*)",
+		"content": ["You seem very certain.", "If I told you that it probably isn't %1, what would you feel?"]
+	}, {
+		"prompt": "Can you (.*)",
+		"content": ["What makes you think I can't %1?", "If I could %1, then what?", "Why do you ask if I can %1?"]
+	}, {
+		"prompt": "Can I (.*)",
+		"content": ["Perhaps you don't want to %1.", "Do you want to be able to %1?", "If you could %1, would you?"]
+	}, {
+		"prompt": "You are (.*)",
+		"content": ["Why do you think I am %1?", "Does it please you to think that I'm %1?", "Perhaps you would like me to be %1.", "Perhaps you're really talking about yourself?"]
+	}, {
+		"prompt": "You\\'re (.*)",
+		"content": ["Why do you say I am %1?", "Why do you think I am %1?", "Are we talking about you, or me?"]
+	}, {
+		"prompt": "I don\\'t (.*)",
+		"content": ["Don't you really %1?", "Why don't you %1?", "Do you want to %1?"]
+	}, {
+		"prompt": "I feel (.*)",
+		"content": ["Good, tell me more about these feelings.", "Do you often feel %1?", "When do you usually feel %1?", "When you feel %1, what do you do?"]
+	}, {
+		"prompt": "I have (.*)",
+		"content": ["Why do you tell me that you've %1?", "Have you really %1?", "Now that you have %1, what will you do next?"]
+	}, {
+		"prompt": "I would (.*)",
+		"content": ["Could you explain why you would %1?", "Why would you %1?", "Who else knows that you would %1?"]
+	}, {
+		"prompt": "Is there (.*)",
+		"content": ["Do you think there is %1?", "It's likely that there is %1.", "Would you like there to be %1?"]
+	}, {
+		"prompt": "My (.*)",
+		"content": ["I see, your %1.", "Why do you say that your %1?", "When your %1, how do you feel?"]
+	}, {
+		"prompt": "You (.*)",
+		"content": ["We should be discussing you, not me.", "Why do you say that about me?", "Why do you care whether I %1?"]
+	}, {
+		"prompt": "Why (.*)",
+		"content": ["Why don't you tell me the reason why %1?", "Why do you think %1?"]
+	}, {
+		"prompt": "I want (.*)",
+		"content": ["What would it mean to you if you got %1?", "Why do you want %1?", "What would you do if you got %1?", "If you got %1, then what would you do?"]
+	}, {
+		"prompt": "(.*) mother(.*)",
+		"content": ["Tell me more about your mother.", "What was your relationship with your mother like?", "How do you feel about your mother?", "How does this relate to your feelings today?", "Good family relations are important."]
+	}, {
+		"prompt": "(.*) father(.*)",
+		"content": ["Tell me more about your father.", "How did your father make you feel?", "How do you feel about your father?", "Does your relationship with your father relate to your feelings today?", "Do you have trouble showing affection with your family?"]
+	}, {
+		"prompt": "(.*) child(.*)",
+		"content": ["Did you have close friends as a child?", "What is your favorite childhood memory?", "Do you remember any dreams or nightmares from childhood?", "Did the other children sometimes tease you?", "How do you think your childhood experiences relate to your feelings today?"]
+	}, {
+		"prompt": "(.*)(fuck|f?ck|shit|sh?t|asshole|pussy|cunt)(.*)",
+		"content": ["Did you have close friends as a child?", "What is your favorite childhood memory?", "Do you remember any dreams or nightmares from childhood?", "Did the other children sometimes tease you?", "How do you think your childhood experiences relate to your feelings today?"]
+	}, {
+		"prompt": "(.*)\\?",
+		"content": ["Why do you ask that?", "Please consider whether you can answer your own question.", "Perhaps the answer lies within yourself?", "Why don't you tell me?"]
+	}, {
+		"prompt": "quit",
+		"content": ["Thank you for talking with me.", "Good-bye.", "Thank you, that will be $150.  Have a good day!"]
+	}, {
+		"prompt": "(.*)",
+		"content": ["Please tell me more.", "Let's change focus a bit... Tell me about your family.", "Can you elaborate on that?", "Why do you say that %1?", "I see.", "Very interesting.", "%1.", "I see.  And what does that tell you?", "How does that make you feel?", "How do you feel when you say that?"]
+	}]
+
+}
