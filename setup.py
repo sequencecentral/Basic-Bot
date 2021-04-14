@@ -13,7 +13,7 @@ setup(
     # Needed for dependencies
     # install_requires=[''],
     # *strongly* suggested for sharing
-    version='1.0',
+    version='1.1',
     # The license can be anything you like
     license='MIT',
     description='Basic Bot',
