@@ -79,14 +79,16 @@ def remove_noise(tweet_tokens):
             cleaned_tokens.append(token.lower())
     return cleaned_tokens
 
-def tag_it(msg="",add_tags=[]):
+def tag_it(msg="",add_tags=""):
     words = remove_noise(msg.split(' '))
+    #convert add_tags to string list
+    at = add_tags.split(' ')
     # print(words)
     hashtags = {tags[word]:True for word in words if word in tags}
-    for t in add_tags:
+    for t in at:
         hashtags[t] = True
     if(len(hashtags)==0):
-        return "#news"
+        return "#news"#default
     else:
         return ' '.join(hashtags.keys())
 
