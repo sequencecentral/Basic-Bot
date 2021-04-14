@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     # Needed to silence warnings (and to be a worthwhile package)
-    name='BasBot',
+    name='basicbot',
     url='https://github.com/sequencecentral/Basic-Bot',
     author='Steve Ayers',
     author_email='steve@sequenccecentral.com',
