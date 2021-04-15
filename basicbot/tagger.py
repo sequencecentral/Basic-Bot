@@ -40,7 +40,7 @@ tags = {
     "inovation":"#inovation",
     "iot":"#tech",
     "ios":"#apple",
-    "iphone":"#apple"
+    "iphone":"#apple",
     "tech":"#tech",
     "mac":"#tech",
     "macintosh":"#apple",

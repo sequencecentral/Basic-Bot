@@ -48,11 +48,11 @@ class Responder:
         sent = self.sen.get_sentiment(text).lower()
         print("Sentiment is: %s"% (sent))
         if 'positive' in sent:
-            intro = """{} {}""".format(self.get_pos_emoji(),self.get_pos_intro()["content"])
+            intro = """{}""".format(self.get_pos_intro()["content"])
         elif 'negative' in sent:
-            intro = """{} {}""".format(self.get_neg_emoji(),self.get_neg_intro()["content"])
+            intro = """{}""".format(self.get_neg_intro()["content"])
         else:
-            intro = """{} {}""".format(self.get_random_emoji(),self.get_random_intro()["content"])
+            intro = """{}""".format(self.get_random_intro()["content"])
         print("Intro: %s"%(intro))
         return intro
 
