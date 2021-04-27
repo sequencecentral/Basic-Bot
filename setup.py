@@ -8,6 +8,7 @@ setup(
     author_email='steve@sequenccecentral.com',
     # Needed to actually package something
     packages=['basicbot'],
+    #include everything in source control
     include_package_data = True,
     #include data files...............
     # data_files=[('characters', ['characters/default.json','characters/professional.json'])],
