@@ -13,3 +13,4 @@ try:
     nltk.download('averaged_perceptron_tagger')
 except Exception as e:
     print(e)
+    print("Unable to download nltk data")

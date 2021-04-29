@@ -3,8 +3,6 @@ import setuptools.command.build_py
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 
-import nltk
-
 class Install(_install):
     def run(self):
         _install.do_egg_install(self)
