@@ -1,3 +1,0 @@
-recursive-include *.xml
-global-exclude env.*
-global-exclude env.xml

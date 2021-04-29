@@ -55,22 +55,12 @@ def import_pairs(character="default"):
     global pairs
     file="characters/{}.json".format(character)
     ps = []
-    # cmd = "pwd"
-    # returns output as byte string
-    # print("Current directory: "+str(subprocess.check_output(cmd)))
-    # try:
     with open(file, 'r') as infile:
         j = json.load(infile)
         # print(j)
         for p in j["chat"]:
             pair = (r'{}'.format(p["prompt"]),tuple(p["content"]))
             ps.append(pair)
-    # except:
-    #     with open("./seqbot/"+file, 'r') as infile:
-    #         j = json.load(infile)
-    #         for p in j["chat"]:
-    #             pair = (r'{}'.format(p["prompt"]),tuple(p["content"]))
-    #             ps.append(pair)
     new_pairs = tuple(ps)
     pairs = new_pairs
     return pairs

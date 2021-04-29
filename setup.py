@@ -1,25 +1,37 @@
 from setuptools import setup
+import setuptools.command.build_py
+from setuptools import setup, find_packages
+from setuptools.command.install import install as _install
+
+import nltk
+
+class Install(_install):
+    def run(self):
+        _install.do_egg_install(self)
+        import nltk
+        print(">>> Downloading NLTK data sets: <<<")
+        data_sets = ['wordnet','pros_cons','punkt','averaged_perceptron_tagger']
+        for name in data_sets:
+            print(name)
+            nltk.download(name)
 
 setup(
+    cmdclass={
+        'install': Install,
+    },
     # Needed to silence warnings (and to be a worthwhile package)
     name='basicbot',
-    url='https://github.com/sequencecentral/Basic-Bot',
-    author='Steve Ayers',
-    author_email='steve@sequenccecentral.com',
-    # Needed to actually package something
-    packages=['basicbot'],
-    #include everything in MANIFEST.in
-    include_package_data = True,
-    #include data files...............
-    # data_files=[('characters', ['characters/default.json','characters/professional.json'])],
-    # Needed for dependencies
-    # install_requires=[''],
-    # *strongly* suggested for sharing
     version='1.4',
-    # The license can be anything you like
+    author='Steve Ayers, Ph.D.',
+    author_email='steve@sequenccecentral.com',
+    url='https://github.com/sequencecentral/Basic-Bot',
+    packages=['basicbot'],
+    include_package_data = True,
+    package_data={'': ['chat.json','emojis.json','naivebayes.pickle','nltk.txt','./characters/default.json','./characters/professional.json']}, #for data specific to this package
+    # data_files=[],#for data shared by multiple packages
     license='MIT',
     description='Basic Bot',
-    # We will also need a readme eventually (there will be a warning)
-    # long_description=open('README.txt').read(),
-    # include_package_data=True
+    long_description=open('README.md').read(),
+    install_requires=open('requirements.txt').read(),
+    setup_requires=['nltk']
 )
