@@ -37,3 +37,4 @@ setup(
 #to make an egg:
 #python setup.py bdist_egg
 #not doing this now bc it caused problems and the egg-info doesn't seem to add anything.
+#needed by current version of pip bc...
