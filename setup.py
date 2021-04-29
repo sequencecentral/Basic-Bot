@@ -3,6 +3,7 @@ import setuptools.command.build_py
 from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 
+#custom post-installation steps go here:
 class Install(_install):
     def run(self):
         _install.do_egg_install(self)
@@ -17,7 +18,6 @@ setup(
     cmdclass={
         'install': Install,
     },
-    # Needed to silence warnings (and to be a worthwhile package)
     name='basicbot',
     version='1.4',
     author='Steve Ayers, Ph.D.',
