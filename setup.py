@@ -33,3 +33,6 @@ setup(
     install_requires=open('requirements.txt').read(),
     setup_requires=['nltk']
 )
+
+#to make an egg:
+#python setup.py bdist_egg
