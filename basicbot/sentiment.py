@@ -6,6 +6,8 @@ from nltk import FreqDist, classify, NaiveBayesClassifier
 import pickle
 import re, string, random
 from . import tools
+from pkg_resources import resource_filename
+package_name = "basicbot"
 
 #class-based version -- faster because model is stored
 class Sentiment_Analyzer:
@@ -13,9 +15,11 @@ class Sentiment_Analyzer:
         self.load_model(model_file)
 
     def load_model(self,model_file):
-        classifier_f = open(model_file, "rb")
-        self.classifier = pickle.load(classifier_f)
-        classifier_f.close()
+        file_path = resource_filename(package_name, model_file)
+        with open(file_path,"rb") as classifier_f:
+            # classifier_f = open(model_file, "rb")
+            self.classifier = pickle.load(classifier_f)
+            # classifier_f.close()
 
     def get_sentiment(self,custom_str=""):
         custom_tokens = tools.remove_noise(tools.word_tokenize(custom_str))

@@ -99,5 +99,3 @@ class Responder:
             emoji = self.get_random_emoji()
         return emoji
     
-# r = Responder()
-# print(r.get_intro('crap'))

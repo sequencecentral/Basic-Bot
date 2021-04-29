@@ -1,6 +1,8 @@
 import nltk
 import json
 import subprocess
+from pkg_resources import resource_filename
+package_name = "basicbot"
 
 def get_response(character='default',r=''):
     if(character == 'default'):
@@ -34,7 +36,8 @@ def converse(character='default'):
     c = nltk.chat.util.Chat(p, nltk.chat.util.reflections)
     c.converse()
 
-def export_pairs(file="chat.json"):
+def export_pairs(file_name="chat.json"):
+    file_path = resource_filename(package_name, file_name)
     ch=[]
     for p in pairs:
         prompt = p[0]
@@ -47,15 +50,16 @@ def export_pairs(file="chat.json"):
     j={}
     j["chat"]=ch
     j={"chat":ch}
-    with open(file, 'w') as outfile:
+    with open(file_path, 'w') as outfile:
         json.dump(j, outfile)
 
 #impor from file and convert to nltk nested tuple format
 def import_pairs(character="default"):
     global pairs
-    file="characters/{}.json".format(character)
+    file_name="characters/{}.json".format(character)
+    file_path = resource_filename(package_name, file_name)
     ps = []
-    with open(file, 'r') as infile:
+    with open(file_path, 'r') as infile:
         j = json.load(infile)
         # print(j)
         for p in j["chat"]:
