@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install as _install
 
 #custom post-installation steps go here:
-class Install(_install):
+# class Install(_install):
     # def run(self):
     #     _install.do_egg_install(self)
     #     import nltk
