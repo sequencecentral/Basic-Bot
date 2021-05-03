@@ -18,7 +18,7 @@ setup(
         'install': Install,
     },
     name='basicbot',
-    version='1.4',
+    version='1.4.5',
     author='Steve Ayers, Ph.D.',
     author_email='steve@sequenccecentral.com',
     url='https://github.com/sequencecentral/Basic-Bot',
