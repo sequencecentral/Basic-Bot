@@ -4,21 +4,21 @@ from setuptools.command.install import install as _install
 
 #custom post-installation steps go here:
 class Install(_install):
-    def run(self):
-        _install.do_egg_install(self)
-        import nltk
-        print(">>> Downloading NLTK data sets: <<<")
-        data_sets = ['wordnet','pros_cons','punkt','averaged_perceptron_tagger']
-        for name in data_sets:
-            print(name)
-            nltk.download(name)
+    # def run(self):
+    #     _install.do_egg_install(self)
+    #     import nltk
+    #     print(">>> Downloading NLTK data sets: <<<")
+    #     data_sets = ['wordnet','pros_cons','punkt','averaged_perceptron_tagger']
+    #     for name in data_sets:
+    #         print(name)
+    #         nltk.download(name)
 
 setup(
-    cmdclass={
-        'install': Install,
-    },
+    # cmdclass={
+    #     'install': Install,
+    # },
     name='basicbot',
-    version='1.4.6',
+    version='1.4.8',
     author='Steve Ayers, Ph.D.',
     author_email='steve@sequenccecentral.com',
     url='https://github.com/sequencecentral/Basic-Bot',
