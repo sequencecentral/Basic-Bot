@@ -30,7 +30,7 @@ setup(
     description='Basic Bot',
     long_description=open('README.md').read(),
     install_requires=['click==7.1.2','joblib==1.0.1','nltk==3.6.1','regex==2021.4.4','tqdm==4.60.0'],
-    setup_requires=['']
+    # setup_requires=['']
 )
 
 #to make an egg:
